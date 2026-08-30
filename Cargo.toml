@@ -1,0 +1,38 @@
+[package]
+name = "dotbar"
+description = "Braille-dot progress bar for statuslines and terminals"
+version = "0.1.0"
+edition = "2024"
+# MSRV = the toolchain the crate is developed and CI-tested against.
+rust-version = "1.95"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/tlehman/dotbar"
+categories = ["command-line-utilities", "visualization"]
+keywords = ["progress", "braille", "statusline", "terminal", "bar"]
+
+[[bin]]
+# The dispatcher resolves subcommands as `<bin>-<sub>`, so the binary name is
+# part of the interface: `dotbar spend` looks for `dotbar-spend`.
+name = "dotbar"
+path = "src/main.rs"
+
+[dependencies]
+# stdin is a trust boundary — arbitrary statusline JSON from the harness — so
+# it gets a real parser rather than a substring scan.
+serde_json = "1.0"
+
+# Panic-capable constructs are banned in production code: a statusline segment
+# that aborts on a malformed field paints nothing at all, and it runs on every
+# prompt redraw. Tests are exempted via clippy.toml — there a panic IS the
+# failure mechanism.
+[lints.clippy]
+unwrap_used = "deny"
+expect_used = "deny"
+indexing_slicing = "deny"
+panic = "deny"
+unreachable = "deny"
+unimplemented = "deny"
+todo = "deny"
+exit = "deny"
+panic_in_result_fn = "deny"
+string_slice = "deny"

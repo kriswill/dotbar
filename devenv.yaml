@@ -1,0 +1,6 @@
+# nixpkgs is pinned to an exact rev rather than a channel branch: the bar is a
+# statusline dependency, so a silent toolchain bump mid-prompt is worse than a
+# stale one. Bump deliberately with `devenv update`.
+inputs:
+  nixpkgs:
+    url: github:NixOS/nixpkgs/624af665418d3c65d544145b4d34ad696439570e
