@@ -30,6 +30,23 @@ sequence, for consumers that render the output as literal text.
 Any other first argument is dispatched git-style to `dotbar-<subcommand>`,
 preferring a sibling of the `dotbar` binary over `$PATH`.
 
+## Install
+
+```
+brew install tlehman/tap/dotbar
+```
+
+Or from source, which needs a Rust toolchain (`brew install rust`):
+
+```
+cargo install --git https://github.com/tlehman/dotbar
+```
+
+The tap's formula is kept in this repo at
+[packaging/homebrew/dotbar.rb](packaging/homebrew/dotbar.rb); the tap repo is
+`tlehman/homebrew-tap`, and `brew install --HEAD tlehman/tap/dotbar` builds
+main.
+
 ## Develop
 
 `devenv shell` (trust once with `devenv allow`), then `devenv test` for the
