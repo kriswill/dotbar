@@ -2,12 +2,15 @@
 
 A braille-dot progress bar for statuslines and terminals.
 
-https://github.com/tlehman/dotbar/raw/main/.github/dotbar.mp4
+![dotbar demo](.github/dotbar.gif)
 
-<!-- GitHub renders a bare video URL on its own line as a player. On a renderer
-     that does not, open .github/dotbar.mp4 directly. Regenerate with
-     `nix run nixpkgs#vhs -- demo/dotbar.tape`; the content is demo/tour.sh,
-     which is also runnable on its own. -->
+<!-- An animated GIF, not the mp4, because GitHub strips <video> and renders a
+     bare .mp4 URL as a plain link. The same recording as
+     [.github/dotbar.mp4](.github/dotbar.mp4), which is smaller and seekable.
+     Regenerate both with:
+       cp demo/dotbar-braille.ttf ~/Library/Fonts/
+       nix run nixpkgs#vhs -- demo/dotbar.tape
+     The content is demo/tour.sh, which is also runnable on its own. -->
 
 ```
 dotbar 76            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣀⣀⣀ 76%   (13 cells, 1% per dot)
