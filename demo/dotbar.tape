@@ -1,9 +1,9 @@
-# Regenerate demo/dotbar.mp4:
+# Regenerate .github/dotbar.mp4:
 #   cp demo/dotbar-braille.ttf ~/Library/Fonts/
 #   nix run nixpkgs#vhs -- demo/dotbar.tape
 # The tape only drives the terminal; the content lives in demo/tour.sh, so the
 # demo and the README stay in step with one edit, not two.
-Output demo/dotbar.mp4
+Output .github/dotbar.mp4
 
 Require bash
 

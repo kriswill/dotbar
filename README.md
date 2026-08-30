@@ -2,10 +2,10 @@
 
 A braille-dot progress bar for statuslines and terminals.
 
-https://github.com/tlehman/dotbar/raw/main/demo/dotbar.mp4
+https://github.com/tlehman/dotbar/raw/main/.github/dotbar.mp4
 
 <!-- GitHub renders a bare video URL on its own line as a player. On a renderer
-     that does not, open demo/dotbar.mp4 directly. Regenerate with
+     that does not, open .github/dotbar.mp4 directly. Regenerate with
      `nix run nixpkgs#vhs -- demo/dotbar.tape`; the content is demo/tour.sh,
      which is also runnable on its own. -->
 
